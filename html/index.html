@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel='stylesheet prefetch' href='http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+ <link href="/Users/ly/Desktop/Foodar/css/index.css" rel="stylesheet" type="text/css"/ >
+ <title>Foodar</title>
+
+</head>
+<body >
+  <div class="body">
+    <div id="banner">
+       <span id='close' onclick='this.parentNode.parentNode.removeChild(this.parentNode); return false;'>x</span>
+</div>
+  <div class="header">
+ <a href="#"><img src="/Users/ly/Desktop/Foodar/picture/logo.jpg"/> </a>
+<div class= "header signin"> <a href="about.html" >SIGN-IN|</a><a href="Register.html">REGISTER|</a><a href="Request.html">REQUEST</a>
+</div></div>
+    <div class="mainpage">
+      <img src="/Users/ly/Desktop/Foodar/picture/Backgroudbody.jpg" width="100%" height="100%"/>
+      <h1 style="color:white; position:absolute; top: 8em;left:40%;" align="center" >TRY A NEW MEAL TODAY </h1>
+    </div>
+    <div class="Container-HOW">
+      <h1 style="color: #e6ac00; font-family:Courier New; text-align: center;">How it Works</h1>
+      <img class="pic" src="/Users/ly/Desktop/Foodar/picture/menu.jpg" width="100%" height="75%"/>
+      <div class="content">
+      <p >The process is simple. we deliver whatever food you order from our partnet restaurants, We
+      provide an experience to our patrons with utmost courtesy and hospitality. Try out Foodar today! </p>
+      <ol>
+        <li> Order your food</li>
+        <li>Find a driver</li>
+        <li>Place pickup request</li>
+      </ol>
+      <a class="button" href="about.html" style="text-decoration:none;">Read More</a>
+    </div></div>
+    <div class="zip">
+      <h2 align= "center">Find a driver near you!</h2>
+      <p align="center">Type in your zipcode below and click Go! to find a driver near you!</p>
+      <form >
+        <input align="center" type="number" id="zipcode" name="zip" placeholder="zipcode"/>
+        <input align="center" type="button" id="btn"value="Go">
+      </form>
+    </div>
+    <div class="footer">
+<a href="#"><i class="fa fa-facebook"></i></a>
+        <ul >
+          <li>&copy 2015 all right reserved</li>
+          <li>private policy</li>
+          <li>terms and conditions</li>
+        </ul>
+  </div></div>
+  <script>
+  var zipcode=document.getElementById("zipcode").value;
+  var btn=document.getElementById("btn");
+  btn.addEventListener("click", function(){
+
+    if( zipcode < 2000)
+    {alert("finding the driver");}
+    else{
+      alert("don't support your city");
+    }
+  })
+  var banner=document.getElementById("banner").addEventListener("onload", setTimeout(display,3000));
+  function display()
+  {
+var x=document.createElement("img");
+    x.setAttribute("src","/Users/ly/Desktop/Foodar/picture/banner.jpg");
+    x.setAttribute("width","100%");
+    x.setAttribute("height","80px");
+    document.getElementById('banner').appendChild(x);
+  }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request</title>
+  <meta charset="UTF-8">
+  <link rel='stylesheet prefetch' href='http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+  <style>
+    body{
+      padding: 20px;
+    }
+    .body{
+      position: relative;
+      left: 40%;
+      max-width: 330px;
+      margin: 20px;
+    }
+    .form{
+      height: 40px;
+      width: 100%;
+      background-color: #d1e0e0;
+      border: none;
+      border-radius: 5px;
+    }
+    .formSt{
+      height: 40px;
+      width: 30%;
+      float: left;
+      display: inline-block;
+      background-color: #d1e0e0;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      text-align: center;
+    }
+    .total{
+      border: none;
+      position: relative;
+      left: 40%;
+    }
+    .request{
+      text-align: center;
+      display: inline-block;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      left:40%;
+    }
+    .request:hover{
+      background-color: #e6ac00;
+    }
+    .footer{
+     border-width: thick;
+     width: 100%;
+     display: block;
+     background-color: black;
+     height: 12em;
+    }
+    .footer ul{
+     list-style-type: none;
+     float: right;
+     color: white;
+     display: inline;
+     padding-right: 30px;
+    }
+    .footer a{
+     float: left;
+     display: inline;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+      	height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <a href="index.html"><img src="/Users/ly/Desktop/Foodar/picture/logo.jpg"/></a>
+    </header>
+    <div class="body">
+    <h1 align="center">REQUEST</h1><br><br><br>
+      <form id="form" name="mainform">
+        <lable>Please fill out the form below:</lable><br><br>
+        <lable>EMAIL:</lable><br><br>
+        <input type="text" class="form" name="email" placeholder="Email"/><br><br>
+        <lable>RESTAURANT</lable><br><br>
+        <input type="text" class="form" name="restaurnat" placeholder="Restaurant"/><br><br>
+        <lalbe>CHOOSE YOUR STYLE</lable><br><br>
+
+      <div class="formSt style">  Classic <br><input type="radio" name="style" value=10 id="style"></div>
+      <div class="formSt style">  Premium <br><input type="radio" name="style" value=20 id="style"></div>
+      <div class="formSt style">Royal <br><input type="radio" name="style" value=30 id="style"> </div><br>
+        <lable>ADD TIP</lable><br><br>
+      <div class="formSt tip"> 10%<br><input type="radio" name="tip" value=0.1 id="tip1"></div>
+      <div class="formSt tip">15%<br><input type="radio" name="tip" value=0.15 id="tip2"></div>
+      <div class="formSt tip">20%<br><input type="radio" name="tip" value=0.2 id="tip3"></div><br><br><br><br>
+        <h2 align="center">TOTAL</h2> <h2 id="total" align="center"></h2><br><br><br><br>
+      </form>
+      <div class="request"p>REQUEST</p></div>
+    </div>
+      <div class="footer">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+              <ul >
+                <li>&copy 2015 all right reserved</li>
+                <li>private policy</li>
+                <li>terms and conditions</li>
+              </ul>
+      </div>
+  </div>
+  <!--Calculate the cost-->
+  <script>
+  document.mainform.onclick = function(){
+  var style = document.mainform.style.value;
+   document.mainform.onclick = function(){
+   var tip = document.mainform.tip.value;
+   var total;
+   total=Number(style)+Number(style)*Number(tip);
+   document.getElementById('total').innerHTML=Number(total);
+   ;}
+ }
+  </script>
+</body>
+
+</html>
